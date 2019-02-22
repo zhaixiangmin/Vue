@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f25cd88a-6c39-4cf9-931d-3d2949e34514" name="Default" comment="" />
+    <list default="true" id="f25cd88a-6c39-4cf9-931d-3d2949e34514" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/11_组件基础/01_基本示例.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/11_组件基础/02_组件的复用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/11_组件基础/03_通过Prop向子组件传递数据.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/11_组件基础/04_单个根元素.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/11_组件基础/05_监听子组件事件.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/interview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="Vue.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,7 +26,26 @@
     <favorites_list name="Vue" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/11_组件基础/05_监听子组件事件.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/interview.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -29,18 +57,18 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>v-on</find>
+      <find>html</find>
     </findStrings>
+    <replaceStrings>
+      <replace>template_html</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test.html" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/view/01_声明式渲染/01.html" />
-        <option value="$PROJECT_DIR$/view/01_声明式渲染/02.html" />
-        <option value="$PROJECT_DIR$/view/02_条件与循环/01.html" />
-        <option value="$PROJECT_DIR$/view/02_条件与循环/02.html" />
-        <option value="$PROJECT_DIR$/view/03_处理用户输入/01.html" />
         <option value="$PROJECT_DIR$/view/03_处理用户输入/02.html" />
         <option value="$PROJECT_DIR$/view/04_组件化应用构建/01.html" />
         <option value="$PROJECT_DIR$/view/05_Vue实例/01_数据与方法.html" />
@@ -84,6 +112,14 @@
         <option value="$PROJECT_DIR$/view/10_表单输入绑定/01_基础用法.html" />
         <option value="$PROJECT_DIR$/view/10_表单输入绑定/02_值绑定.html" />
         <option value="$PROJECT_DIR$/view/10_表单输入绑定/03_修饰符.html" />
+        <option value="$PROJECT_DIR$/view/11_组件基础/01_基本示例.html" />
+        <option value="$PROJECT_DIR$/view/11_组件基础/02_组件的复用.html" />
+        <option value="$PROJECT_DIR$/view/11_组件基础/03_通过Prop向子组件传递数据.html" />
+        <option value="$PROJECT_DIR$/view/11_组件基础/04_单个根元素.html" />
+        <option value="$PROJECT_DIR$/view/11_组件基础/05_监听子组件事件.html" />
+        <option value="$PROJECT_DIR$/view/11_组件基础/test.html" />
+        <option value="$PROJECT_DIR$/view/11_组件基础/interview.html" />
+        <option value="$PROJECT_DIR$/view/interview.html" />
       </list>
     </option>
   </component>
@@ -94,9 +130,12 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="809" />
-    <option name="width" value="770" />
+    <option name="x" value="566" />
+    <option name="width" value="889" />
     <option name="height" value="860" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -132,12 +171,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code\Vue\view" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\Vue\view\11_组件基础" />
       <recent name="D:\Code\Vue\view" />
       <recent name="D:\Code\Vue\view\08_列表渲染" />
       <recent name="D:\Code\Vue\view\07_条件渲染" />
       <recent name="D:\Code\Vue\view\06_绑定内联样式" />
-      <recent name="D:\Code\Vue\view\05_Class与Style绑定" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -193,17 +235,18 @@
       <workItem from="1550624373011" duration="5598000" />
       <workItem from="1550711547836" duration="1234000" />
       <workItem from="1550744506283" duration="46000" />
-      <workItem from="1550797654303" duration="597000" />
+      <workItem from="1550797654303" duration="7082000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48413000" />
+    <option name="totallyTimeSpent" value="54898000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="809" y="0" width="770" height="860" extended-state="0" />
+    <frame x="566" y="0" width="889" height="860" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29781422" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29612222" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -226,12 +269,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jquery-1.11.1.min.js" />
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/view/test1.html" />
-    <entry file="file://$PROJECT_DIR$/view/02_条件与循环/01.html" />
-    <entry file="file://$PROJECT_DIR$/view/02_条件与循环/02.html" />
-    <entry file="file://$PROJECT_DIR$/view/04_组件化应用构建/01.html" />
     <entry file="file://$PROJECT_DIR$/view/03_处理用户输入/01.html" />
     <entry file="file://$PROJECT_DIR$/view/02_Vue实例/01_数据与方法.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -525,6 +562,48 @@
           <folding>
             <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/11_组件基础/01_基本示例.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/11_组件基础/02_组件的复用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/11_组件基础/03_通过Prop向子组件传递数据.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/11_组件基础/04_单个根元素.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/11_组件基础/05_监听子组件事件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/interview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
         </state>
       </provider>
     </entry>

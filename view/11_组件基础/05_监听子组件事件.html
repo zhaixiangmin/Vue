@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05_监听子组件事件</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <div :style="{ fontSize: postFontSize + 'em' }">
+    <blog-post v-bind:key="post.id" v-bind:post="post" v-for="post in posts"></blog-post>
+  </div>
+</div>
+<!--<div class="blog-post" v-on:enlarge-text="postFontSize += 0.1">-->
+  <!--<h3>{{ post.title }}</h3>-->
+  <!--<button v-on:click="$emit(\'enlarge-text\')">Enlarge text</button>-->
+  <!--<div v-html="post.content"></div>-->
+<!--</div>-->
+<script type="text/javascript">
+  var template_html = '';
+  template_html += '<div class="blog-post" v-on:enlarge-text="postFontSize += 0.1">';
+  template_html += '  <h3>{{ post.title }}</h3>';
+  template_html += '  <button v-on:click="$emit(\'enlarge-text\')">Enlarge text</button>';
+  template_html += '  <div v-html="post.content"></div>';
+  template_html += '</div>';
+  Vue.component('blog-post', {
+    props: ['post'],
+    template: template_html
+  });
+  var app = new Vue({
+    el: '#app',
+    data: {
+      postFontSize: 1,
+      posts: [
+        { id: 1, title: 'My journey with Vue', content: 'content1' },
+        { id: 2, title: 'Blogging with Vue', content: 'content2' },
+        { id: 3, title: 'Why Vue is so fun', content: 'content3' },
+      ]
+    }
+  });
+</script>
+</body>
+</html>
