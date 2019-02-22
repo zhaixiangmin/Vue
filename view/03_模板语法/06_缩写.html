@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>06_缩写</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <a v-bind:href="url">v-v-bind全称</a><br/>
+  <a :href="url">v-bind缩写</a><br/>
+  <a v-on:click="doSomething">v-on全称</a><br/>
+  <a @click="doSomething">v-on缩写</a><br/>
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#app',
+    data: {
+      url: 'https://baidu.com'
+    },
+    methods: {
+      doSomething: function () {
+        console.log('doSomething')
+      }
+    }
+  })
+</script>
+</body>
+</html>

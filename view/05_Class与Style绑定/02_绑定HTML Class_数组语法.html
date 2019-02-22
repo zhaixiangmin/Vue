@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02_绑定HTML Class_数组语法</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <div class="static" v-bind:class="[activeClass, errorClass]">数组语法</div>
+  <div class="static" v-bind:class="[isActive ? activeClass : '', errorClass]">数组语法(包含逻辑)</div>
+  <div class="static" v-bind:class="[{ activeClass: isActive }, errorClass]">数组语法（包含对象）</div>
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#app',
+    data: {
+      activeClass: 'active',
+      errorClass: 'text-danger',
+      isActive: false
+    }
+  })
+</script>
+</body>
+</html>

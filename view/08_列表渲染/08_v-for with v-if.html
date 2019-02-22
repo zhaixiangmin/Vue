@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>08_v-for with v-if</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <ul v-if="todos.length">
+    <!--当它们处于同一节点，v-for 的优先级比 v-if 更高-->
+    <li v-for="todo in todos" v-if="!todo.isComplete">
+      {{ todo }}
+    </li>
+  </ul>
+  <p v-else>No todos left!</p>
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#app',
+    data: {
+      todos: [
+        { msg: 'one', isComplete: false },
+        { msg: 'two', isComplete: true },
+        { msg: 'three', isComplete: false },
+      ]
+    }
+  })
+</script>
+</body>
+</html>

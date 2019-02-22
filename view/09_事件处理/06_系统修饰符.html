@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>06_系统修饰符</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <!--Alt + C-->
+  <input @keyup.alt.67="doAlt" placeholder="Alt + C"><br/>
+  <!--Ctrl + 任意键-->
+  <input @keyup.ctrl="doCtrlAnykey" placeholder="Ctrl + 任意键"><br/>
+  <!--Ctrl-->
+  <input @keyup.17="doCtrl" placeholder="Ctrl"><br/>
+  <!--Ctrl + Click-->
+  <div @click.ctrl="doCtrlClick">Ctrl + Click</div>
+
+  <div>.exact修饰符</div>
+  <!--即使 Alt 或 Shift 被一同按下时也会触发-->
+  <button @click.ctrl="onClick">onClick</button><br/>
+  <!--有且只有 Ctrl 被按下的时候才触发-->
+  <button @click.ctrl.exact="onClick">onClick</button><br/>
+  <!--没有任何系统修饰符被按下的时候才触发-->
+  <button @click.exact="onClick">onClick</button><br/>
+
+  <div>鼠标按钮修饰符</div>
+  <button @click.left="left">left</button>
+  <button @click.right="right">right</button>
+  <!--阻止默认事件-->
+  <!--<button @click.right.prevent="right">right</button>-->
+  <button @click.middle="middle">middle</button>
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#app',
+    methods: {
+      doAlt: function () {
+        alert('doAlt');
+      },
+      doCtrlAnykey: function () {
+        alert('doCtrlAnykey');
+      },
+      doCtrl: function () {
+        alert('doCtrl');
+      },
+      doCtrlClick: function () {
+        alert('doCtrlClick');
+      },
+      onClick: function () {
+        alert('onClick');
+      },
+      left: function () {
+        alert('left');
+      },
+      right: function (event) {
+        alert('right');
+        event.preventDefault(); // 阻止默认事件
+      },
+      middle: function () {
+        alert('middle');
+      },
+    }
+  })
+</script>
+</body>
+</html>

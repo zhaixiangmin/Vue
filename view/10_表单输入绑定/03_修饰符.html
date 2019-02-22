@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_修饰符</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <div>
+    <!--在“change”时而非“input”时更新，input输入框失去焦点时-->
+    <input v-model.lazy="msg">
+    <span>msg: {{ msg }}</span>
+  </div>
+  <div>
+    <!--自动将用户的输入值转为数值类型，默认返回字符串-->
+    <input v-model.number="age" type="number">
+  </div>
+  <div>
+    <input v-model.trim="msg2">
+    <span style="background: red;">msg2: {{ msg2 }}</span>
+  </div>
+</div>
+<script type="text/javascript">
+  var app= new Vue({
+    el: '#app',
+    data: {
+      msg: '',
+      age: undefined,
+      msg2: '',
+    }
+  })
+</script>
+</body>
+</html>

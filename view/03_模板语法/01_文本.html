@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_文本</title>
+    <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <span>Message: {{ msg }}</span><br/>
+  <span v-once>这个将不会改变：{{ msg }}</span>
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+          msg: 'Hello Vue!'
+        }
+    });
+</script>
+</body>
+</html>

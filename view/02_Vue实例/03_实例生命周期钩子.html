@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03_实例生命周期钩子</title>
+    <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <p>{{ a }}</p>
+  <input v-model="a">
+</div>
+<script type="text/javascript">
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      a: 1
+    },
+    beforeCreate: function () {
+      console.log('beforeCreate');
+    },
+    created: function () {
+      console.log('created a is: ' + this.a);
+    },
+    beforeMount: function () {
+      console.log('beforeMount');
+    },
+    mounted: function () {
+      console.log('mounted');
+    },
+    beforeUpdate: function () {
+      console.log('beforeUpdate');
+    },
+    update: function () {
+      console.log('update');
+    },
+    beforeDestroy: function () {
+      console.log('beforeDestroy');
+    },
+    destroy: function () {
+      console.log('destroy');
+    },
+  });
+</script>
+</body>
+</html>

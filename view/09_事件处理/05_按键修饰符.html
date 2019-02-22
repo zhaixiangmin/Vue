@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05_按键修饰符</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <!--只有在'key' 是 'Enter' 时调用-->
+  <input v-on:keyup.enter="doEnter" placeholder="只有在'key' 是 'Enter' 时调用"><br/>
+  <!--可以直接将 KeyboardEvent.key 暴露的任意有效按键名转换为 '短横线命名' 来作为修饰符-->
+  <input v-on:keyup.page-down="doPageDown" placeholder="PageDown"><br/>
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#app',
+    methods: {
+      doEnter: function () {
+        alert('doEnter');
+      },
+      doPageDown: function () {
+        alert('doPageDown');
+      },
+    }
+  })
+</script>
+</body>
+</html>

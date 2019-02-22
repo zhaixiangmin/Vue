@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>04_对象更新检测注意事项</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <ul>
+    <li v-for="(value, key) in userProfile">
+      {{ key }} : {{ value }}
+    </li>
+  </ul>
+  <div>新属性(基本类型)：{{ b }}</div>
+  <div>新属性(对象)：
+    <ul>
+      <li v-for="(value, key) in teacher">
+        {{ key }} : {{ value }}
+      </li>
+    </ul>
+  </div>
+
+  <ul>
+    <li v-for="value in arrays">
+      {{ value }}
+    </li>
+  </ul>
+
+  <button type="button" @click="add">添加属性</button>
+  <button type="button" @click="add2">添加属2</button>
+
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#app',
+    data: {
+      userProfile: {
+        name: 'Anika'
+      },
+      arrays: [ 1, 3 ],
+      // teacher: {}
+      teacher: {
+        subject: '语文',
+        college: 'University'
+      }
+      // b: 7
+    },
+    methods: {
+      // 数组改、对象属性增删改、根数据（基本类型/对象）新增
+      // 非响应式操作，可以操作成功，但不能及时更新(要到下一次更新，才一起更新)
+      // 要用响应式方式操作，才能及时更新Vue.set、Object.assign
+      add: function () {
+        // this.userProfile.age = '32'; // 对象属性增(不及时更新)
+        // delete this.userProfile['name']; // 对象属性删(不及时更新)
+        // this.userProfile.name = 'Willian'; // 对象属性改(不及时更新)
+
+        // this.arrays.push(5); // 数组增
+        // this.arrays.pop(); // 数组删
+        this.arrays[0] = 10; // 数组改(不及时更新)
+
+        // this.teacher = {
+        //   subject: '语文',
+        //   college: 'University'
+        // };
+        delete this.teacher; // 对象删(不及时更新)
+        // this.teacher = Object.assign({}, this.teacher, {
+        //   subject: '语文',
+        //   college: 'University'
+        // });
+
+        // // 添加单个属性
+        // Vue.set(this.userProfile, 'age', 27);
+        // // 添加多个属性
+        // this.userProfile = Object.assign({}, this.userProfile, {
+        //   age: 54,
+        //   favoriteColor: 'Vue Green'
+        // });
+
+        this.b = 5;
+
+        return;
+      },
+      add2: function () {
+        // 添加单个属性
+        Vue.set(this.userProfile, 'age', 27);
+        // 添加多个属性
+        this.userProfile = Object.assign({}, this.userProfile, {
+          age: 54,
+          favoriteColor: 'Vue Green'
+        });
+        return;
+      }
+    }
+  });
+
+</script>
+</body>
+</html>

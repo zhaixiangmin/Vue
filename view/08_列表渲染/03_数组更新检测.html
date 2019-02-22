@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_数组更新检测</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <ul>
+    <li v-for="item in items">
+      {{ item.message }}
+    </li>
+  </ul>
+  <ul>
+    <li v-for="(item, index) in items">
+      {{ parentMessage }} - {{ index }} - {{ item.message }}
+    </li>
+  </ul>
+  <button type="button" @click="filter">过滤</button>
+
+  <ul>
+    <li v-for="item in arr">
+      {{ item }}
+    </li>
+  </ul>
+  <button type="button" @click="replace">替换数组</button>
+
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#app',
+    data: {
+      parentMessage: 'Parent',
+      items: [
+        { message: 'Foo' },
+        { message: 'Bar' },
+        { message: 'Bar' }
+      ],
+      arr: ['a', 'b', 'c']
+    },
+    methods: {
+      filter: function () {
+        this.items = this.items.filter(function (item) {
+          return item.message.match(/Foo/)
+        });
+        return;
+      },
+      replace: function () {
+        // Vue.set(this.arr, 0, 'd');
+        // this.$set(this.arr, 1, 'e');
+        this.arr[1] = 'f';
+        this.items[0] = { message: 'Goo' };
+        this.items[1].message = 'Hoo';
+        // app.$set(this.items, 1, { message: 'Goo' });
+        return;
+      }
+    }
+  });
+
+</script>
+</body>
+</html>

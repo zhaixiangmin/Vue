@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01_v-if</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <div v-if="ok">Yes</div>
+  <div v-else>No</div>
+
+  <div v-if="ok">v-if</div>
+  <div v-show="ok">v-show</div>
+
+  <template v-if="ok2">
+    <h1>Title</h1>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+  </template>
+
+  <div v-if="Math.random() > 0.5">
+    Now you see me
+  </div>
+  <div v-else>
+    Now you don't
+  </div>
+
+  <div v-if="type == 'A'">
+    A
+  </div>
+  <div v-else-if="type == 'B'">
+    B
+  </div>
+  <div v-else-if="type == 'C'">
+    C
+  </div>
+  <div v-else>
+    Not A/B/C
+  </div>
+
+  <!--Vue 会尽可能高效地渲染元素，通常会复用已有元素而不是从头开始渲染。这么做除了使 Vue 变得非常快之外，还有其它一些好处。-->
+  <template v-if="loginType == 'username'">
+    <label>Username</label>
+    <input placeholder="Enter your username">
+  </template>
+  <template v-else>
+    <label>Email</label>
+    <input placeholder="Enter you email address">
+  </template>
+  <input v-on:click="toggleLoginType" type="button" value="Toggle login type">
+
+  <br/>
+  <!--Vue 为你提供了一种方式来表达“这两个元素是完全独立的，不要复用它们”。只需添加一个具有唯一值的 key 属性即可-->
+  <!--<label> 元素仍然会被高效地复用，因为它们没有添加 key 属性-->
+  <template v-if="loginType2 == 'username'">
+    <label>Username2</label>
+    <input placeholder="Enter you username" key="username-input">
+  </template>
+  <template v-else>
+    <label>Email2</label>
+    <input placeholder="Enter your email address" key="email-input">
+  </template>
+  <input v-on:click="toggleLoginType2" type="button" value="Toggle login type">
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#app',
+    data: {
+      ok: true,
+      ok2: true,
+      type: 'A',
+      loginType: 'username',
+      loginType2: 'username'
+    },
+    methods: {
+      toggleLoginType: function () {
+        this.loginType = this.loginType == 'username' ? 'email' : 'username';
+        return;
+      },
+      toggleLoginType2: function () {
+        this.loginType2 = this.loginType2 == 'username' ? 'email' : 'username';
+        return;
+      }
+    }
+  });
+</script>
+</body>
+</html>

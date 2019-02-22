@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02_事件处理方法</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <button v-on:click="greet">Greet</button>
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#app',
+    data: {
+      name: 'Vue.js'
+    },
+    methods: {
+      greet: function (event) {
+        alert('Hello ' + this.name + '!');
+        if(event) {
+          alert(event.target.tagName);
+        }
+      }
+    }
+  })
+</script>
+</body>
+</html>

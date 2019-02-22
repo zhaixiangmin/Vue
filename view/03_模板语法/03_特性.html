@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03_特性</title>
+    <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <div v-bind:id="dynamicId">dynamicId</div>
+  <button v-bind:disabled="isButtonDisabled">Button</button>
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+          dynamicId: 119,
+          // 如果 isButtonDisabled 的值是 null、undefined 或 false，则 disabled 特性甚至不会被包含在渲染出来的 <button> 元素中
+          isButtonDisabled: false
+        }
+    });
+</script>
+</body>
+</html>
