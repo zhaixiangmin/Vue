@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05_监听子组件事件3_在组件上使用v-model</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <custom-input v-model="searchText"></custom-input>
+  <p>searchText: {{ searchText }}</p>
+</div>
+
+<script type="text/javascript">
+  Vue.component('custom-input', {
+    props: ['value'],
+    template: `
+      <input v-bind:value="value" v-on:input="$emit('input', $event.target.value)" />
+    `
+  });
+  var app = new Vue({
+    el: '#app',
+    data: {
+      searchText: ''
+    },
+    methods: {
+      onEnlargeText: function (enlargeAmount) {
+        this.postFontSize += enlargeAmount;
+      }
+    }
+  });
+</script>
+</body>
+</html>

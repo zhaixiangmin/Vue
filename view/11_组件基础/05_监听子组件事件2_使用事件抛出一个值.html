@@ -2,28 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>05_监听子组件事件</title>
+  <title>05_监听子组件事件2_使用事件抛出一个值</title>
   <script src="../../public/vendor/vue/vue.js"></script>
 </head>
 <body>
 <div id="app">
   <div :style="{ fontSize: postFontSize + 'em' }">
-    <blog-post v-on:enlarge-large="postFontSize += 0.1" v-bind:key="post.id" v-bind:post="post" v-for="post in posts"></blog-post>
+    <!--<blog-post v-on:enlarge-large="postFontSize += $event" v-bind:key="post.id" v-bind:post="post" v-for="post in posts"></blog-post>-->
+    <blog-post v-on:enlarge-large="onEnlargeText" v-bind:key="post.id" v-bind:post="post" v-for="post in posts"></blog-post>
   </div>
 </div>
 
 <script type="text/javascript">
-  // var template_html = '';
-  // template_html += '<div class="blog-post">';
-  // template_html += '  <h3>{{ post.title }}</h3>';
-  // template_html += '  <button v-on:click="$emit(\'enlarge-large\')">Enlarge text</button>';
-  // template_html += '  <div v-html="post.content"></div>';
-  // template_html += '</div>';
-
   var template_html = `
     <div class="blog-post">
       <h3>{{ post.title }}</h3>
-      <button v-on:click="$emit('enlarge-large')">
+      <button v-on:click="$emit('enlarge-large', 0.3)">
         Enlarge text
       </button>
       <div v-html="post.content"></div>
@@ -33,15 +27,6 @@
   Vue.component('blog-post', {
     props: ['post'],
     template: template_html
-  //   template: `
-  //   <div class="blog-post">
-  //     <h3>{{ post.title }}</h3>
-  //     <button v-on:click="$emit('enlarge-large')">
-  //       Enlarge text
-  //     </button>
-  //     <div v-html="post.content"></div>
-  //   </div>
-  // `
   });
   var app = new Vue({
     el: '#app',
@@ -54,8 +39,8 @@
       ]
     },
     methods: {
-      big: function () {
-        console.log('big');
+      onEnlargeText: function (enlargeAmount) {
+        this.postFontSize += enlargeAmount;
       }
     }
   });
