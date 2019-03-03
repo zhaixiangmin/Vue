@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01_Prop的大小写</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <!--在 HTML 中是 kebab-case 的-->
+  <blog-post post-title="hello"></blog-post>
+</div>
+<script type="text/javascript">
+  Vue.component('blog-post', {
+    // 在 JavaScript 中是 camelCase 的
+    props: ['postTitle'],
+    template: `<h3>{{ postTitle }}</h3>`
+  });
+  var app = new Vue({
+    el: '#app'
+  });
+</script>
+</body>
+</html>
