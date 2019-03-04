@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01_事件名</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <my-component v-on:my-event="doSomething"></my-component>
+</div>
+
+<script type="text/javascript">
+  Vue.component('my-component', {
+    template: `
+      <button v-on:click="$emit('my-event')">my-event</button>
+    `
+  });
+  var app = new Vue({
+    el: '#app',
+    methods: {
+      doSomething: function () {
+        console.log('doSomething');
+      }
+    }
+  })
+</script>
+</body>
+</html>
