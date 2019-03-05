@@ -2,22 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>01_Prop的大小写</title>
+  <title>06_非Prop的特性</title>
   <script src="../../public/vendor/vue/vue.js"></script>
 </head>
 <body>
 <div id="app">
-  <!--在 HTML 中是 kebab-case 的-->
-  <blog-post post-title="hello"></blog-post>
+  <bootstrap-date-input type="text" class="date-picker-theme-dark"></bootstrap-date-input>
+  <base-input v-model="username" required placeholder="Enter your username" label="dksjfkds"></base-input>
 </div>
+
+
+
+
 <script type="text/javascript">
-  Vue.component('blog-post', {
-    // 在 JavaScript 中是 camelCase 的
-    props: ['postTitle'],
-    template: `<h3>{{ postTitle }}</h3>`
+  Vue.component('bootstrap-date-input', {
+    template: `<input type="date" class="form-control" />`
+  });
+  Vue.component('base-input', {
+    // inheritAttrs: false,
+    props: ['label', 'value'],
+    template: `
+      <label>
+        {{ label }}
+        <input v-bind="$attrs" v-bind:value="value" v-on:input="$emit('input', $event.target.value)" />
+      </label>
+    `
   });
   var app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+      username: ''
+    }
   });
 </script>
 </body>

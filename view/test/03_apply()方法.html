@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_apply()方法</title>
+</head>
+<body>
+<script type="text/javascript">
+  function sayColor(sPrefix, sSuffix) {
+    console.log(sPrefix + this.color + sSuffix);
+  }
+
+  var obj = new Object();
+  obj.color = 'blue';
+
+  sayColor.apply(obj, new Array('The color is ', ', a very nice color indeed.'));
+</script>
+</body>
+</html>

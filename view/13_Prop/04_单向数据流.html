@@ -2,31 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>03_单向数据流</title>
+  <title>04_单向数据流</title>
   <script src="../../public/vendor/vue/vue.js"></script>
 </head>
 <body>
 <div id="app">
-  <blog-post initialCounter="2"></blog-post>
+  <!--<blog-post v-bind:initial-counter="2"></blog-post>-->
+  <blog-post size="  36Inc  "></blog-post>
 </div>
 <script type="text/javascript">
   Vue.component('blog-post', {
-    props: ['initialCounter'],
+    props: ['initialCounter', 'size'],
     data: function () {
       return {
         counter: this.initialCounter
       }
     },
-    template: `<h3>{{ counter }}</h3>`
+    computed: {
+      normalizedSize: function () {
+        // return this.size
+        return this.size.trim().toLowerCase()
+      }
+    },
+    // template: `<h3>{{ counter }}</h3>`
+    template: `<h3>{{ normalizedSize }}</h3>`
   });
   var app = new Vue({
-    el: '#app',
-    // props: ['initialCounter'],
-    // data: function () {
-    //   return {
-    //     counter: this.initialCounter
-    //   }
-    // }
+    el: '#app'
   });
 </script>
 </body>

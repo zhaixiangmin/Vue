@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01_对象冒充</title>
+</head>
+<body>
+<script type="text/javascript">
+  function ClassA(sColor) {
+    this.color = sColor;
+    this.sayColor = function () {
+      alert(this.color);
+    }
+  }
+  function ClassB(sColor) {
+    // 因为构造函数只是一个函数，所以可使 ClassA 构造函数成为 ClassB 的方法，然后调用它。
+    // ClassB 就会收到 ClassA 的构造函数中定义的属性和方法。
+    this.m = ClassA;
+    this.m(sColor);
+    delete this.m;
+  }
+  var objA = new ClassA('blue');
+  var objB = new ClassB('red');
+  objA.sayColor();
+  objB.sayColor();
+</script>
+</body>
+</html>
