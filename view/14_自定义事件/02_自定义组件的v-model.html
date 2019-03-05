@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>07_自定义组件的v-model</title>
+  <title>02_自定义组件的v-model</title>
   <script src="../../public/vendor/vue/vue.js"></script>
 </head>
 <body>
 <div id="app">
-  <blog-post post-title="hello"></blog-post>
+  <base-checkbox v-model="lovingVue"></base-checkbox>
 </div>
 <script type="text/javascript">
   Vue.component('base-checkbox', {
@@ -23,7 +23,10 @@
     `
   });
   var app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+      lovingVue: false
+    }
   });
 </script>
 </body>

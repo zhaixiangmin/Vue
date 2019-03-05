@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_将原生事件绑定到组件</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <base-checkbox v-on:focus.native="onFocus"></base-checkbox>
+</div>
+<script type="text/javascript">
+  Vue.component('base-checkbox', {
+    props: ['value'],
+    template: `
+      <input v-bind="$attrs" v-bind:value="value" v-on:input="$emit('input', $event.target.checked)" />
+    `
+  });
+  var app = new Vue({
+    el: '#app',
+    methods: {
+      onFocus: function () {
+        console.log('onFocus')
+      }
+    }
+  });
+</script>
+</body>
+</html>
