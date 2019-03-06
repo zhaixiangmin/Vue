@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>01_插槽内容</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
 </head>
 <body>
-$END$
+<div id="app">
+  <navigation-link url="/profile">
+    <span class="fa fa-user"></span>
+    Your Profile
+  </navigation-link>
+</div>
+<script type="text/javascript">
+  Vue.component('navigation-link', {
+    props: ['url'],
+    template: `
+      <a v-bind:href="url" class="nav-link">
+        <slot></slot>
+      </a>
+    `
+  });
+  var app = new Vue({
+    el: '#app'
+  })
+</script>
 </body>
 </html>

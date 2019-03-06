@@ -2,49 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>04_具名插槽</title>
+  <title>05_作用域插槽</title>
   <script src="../../public/vendor/vue/vue.js"></script>
 </head>
 <body>
 <div id="app">
-  <base-layout>
-    <template v-slot:header>
-      <h1>Here might be a page title</h1>
+  <!--<current-user>-->
+    <!--<template v-slot:default="slot">-->
+      <!--{{ slot.puser.firstName }}-->
+    <!--</template>-->
+  <!--</current-user>-->
+
+  <!--独占默认插槽的缩写语法-->
+  <!--<current-user>-->
+    <!--<template v-slot="slot">-->
+      <!--{{ slot.puser.firstName }}-->
+    <!--</template>-->
+  <!--</current-user>-->
+
+  <!--解构插槽Prop-->
+  <!--<current-user>-->
+    <!--<template v-slot="{ puser }">-->
+      <!--{{ puser.firstName }}-->
+    <!--</template>-->
+  <!--</current-user>-->
+
+  <!--解构插槽Prop -- 重命名-->
+  <current-user>
+    <template v-slot="{ puser: tuser }">
+      {{ tuser.firstName }}
     </template>
-
-    <!--<p>A paragragh for the main content.</p>-->
-    <!--<p>And another one.</p>-->
-
-    <template>
-      <p>A paragragh for the main content.</p>
-      <p>And another one.template</p>
-    </template>
-
-    <template v-slot:footer>
-      <p>Here's some contact info</p>
-    </template>
-
-  </base-layout>
+  </current-user>
 </div>
 
 <script type="text/javascript">
-  Vue.component('base-layout', {
+  Vue.component('current-user', {
+    data: function () {
+      return {
+        user: {
+          firstName: 'Willian',
+          lastName: 'John'
+        }
+      }
+    },
     template: `
-    <div class="container">
-      <header>
-        <slot name="header"></slot>
-      </header>
-      <main>
-        <slot></slot>
-      </main>
-      <footer>
-        <slot name="footer"></slot>
-      </footer>
-    </div>
+    <span>
+      <slot v-bind:puser="user">
+        {{ user.lastName }}
+      </slot>
+    </span>
     `
   });
   var app = new Vue({
-    el: '#app'
+    el: '#app',
+    // data: {
+    //   user: {
+    //     firstName: 'Willian',
+    //     lastName: 'John'
+    //   }
+    // }
   })
 </script>
 </body>

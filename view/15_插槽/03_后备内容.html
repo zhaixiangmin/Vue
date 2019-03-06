@@ -2,23 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>01_插槽内容</title>
+  <title>03_后备内容</title>
   <script src="../../public/vendor/vue/vue.js"></script>
 </head>
 <body>
 <div id="app">
-  <navigation-link url="/profile">
-    <span class="fa fa-user"></span>
-    Your Profile
-  </navigation-link>
+  <submit-button url="/profile">
+    Save
+  </submit-button>
 </div>
 <script type="text/javascript">
-  Vue.component('navigation-link', {
-    props: ['url'],
+  Vue.component('submit-button', {
     template: `
-      <a v-bind:href="url" class="nav-link">
-        <slot></slot>
-      </a>
+      <button type="submit">
+        <slot>Submit</slot>
+      </button>
     `
   });
   var app = new Vue({

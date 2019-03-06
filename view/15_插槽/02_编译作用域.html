@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>01_插槽内容</title>
+  <title>02_编译作用域</title>
   <script src="../../public/vendor/vue/vue.js"></script>
 </head>
 <body>
 <div id="app">
   <navigation-link url="/profile">
-    <span class="fa fa-user"></span>
-    Your Profile
+    Logged in as {{ user.name }}
+  </navigation-link>
+  <navigation-link url="/profile">
+    Clicking here will send you to: {{ url }}
   </navigation-link>
 </div>
 <script type="text/javascript">
@@ -22,7 +24,12 @@
     `
   });
   var app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+      user: {
+        name: 'John'
+      }
+    }
   })
 </script>
 </body>

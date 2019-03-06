@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>04_.sync修饰符</title>
+  <title>04_.sync修饰符2</title>
   <script src="../../public/vendor/vue/vue.js"></script>
 </head>
 <body>
 <div id="app">
-  <text-document v-bind:title.sync="doc.title" v-on:change-event="change"></text-document>
+  <text-document v-bind.sync="doc" v-on:change-event="change"></text-document>
 </div>
 <script type="text/javascript">
   Vue.component('text-document', {
@@ -20,12 +20,14 @@
     el: '#app',
     data: {
       doc: {
-        title: 'This is a title.'
+        title: 'This is a title.',
+        content: 'This is content'
       }
     },
     methods: {
       change: function ($event) {
         this.doc.title = 'change the title.';
+        this.doc.content = 'change the content.';
         console.log('change');
         console.log('$event', $event);
       }
