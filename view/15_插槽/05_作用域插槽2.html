@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05_作用域插槽</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <!--<current-user>-->
+    <!--<template v-slot:default="slot">-->
+      <!--{{ slot.puser.firstName }}-->
+    <!--</template>-->
+  <!--</current-user>-->
+
+  <!--独占默认插槽的缩写语法-->
+  <!--<current-user>-->
+    <!--<template v-slot="slot">-->
+      <!--{{ slot.puser.firstName }}-->
+    <!--</template>-->
+  <!--</current-user>-->
+
+  <!--解构插槽Prop-->
+  <!--<current-user>-->
+    <!--<template v-slot="{ puser }">-->
+      <!--{{ puser.firstName }}-->
+    <!--</template>-->
+  <!--</current-user>-->
+
+  <!--解构插槽Prop -- 重命名-->
+  <!--<current-user>-->
+    <!--<template v-slot="{ puser: tuser }">-->
+      <!--{{ tuser.firstName }}-->
+    <!--</template>-->
+  <!--</current-user>-->
+
+
+  <!--<current-user v-slot="{ puser = { firstName: 'Guest' } }">-->
+    <!--{{ puser.firstName }}-->
+  <!--</current-user>-->
+
+  <current-user v-slot="{ user = { firstName: 'Guest' } }">
+    {{ user.firstName }}
+  </current-user>
+</div>
+
+<script type="text/javascript">
+  Vue.component('current-user', {
+    data: function () {
+      return {
+        user: undefined
+      }
+    },
+    template: `
+    <span>
+      <slot v-bind:user="user">
+
+      </slot>
+    </span>
+    `
+  });
+  var app = new Vue({
+    el: '#app',
+    // data: {
+    //   user: {
+    //     firstName: 'Willian',
+    //     lastName: 'John'
+    //   }
+    // }
+  })
+</script>
+</body>
+</html>

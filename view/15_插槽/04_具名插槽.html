@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_后备内容</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <submit-button url="/profile">
+    Save
+  </submit-button>
+</div>
+<script type="text/javascript">
+  Vue.component('submit-button', {
+    template: `
+      <button type="submit">
+        <slot>Submit</slot>
+      </button>
+    `
+  });
+  var app = new Vue({
+    el: '#app'
+  })
+</script>
+</body>
+</html>
