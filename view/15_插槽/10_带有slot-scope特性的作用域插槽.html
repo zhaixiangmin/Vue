@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10_带有slot-scope特性的作用域插槽</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+
+  <!--<slot-example>-->
+    <!--<template slot="default" slot-scope="props">-->
+      <!--{{ props.msg }}-->
+    <!--</template>-->
+  <!--</slot-example>-->
+
+  <!--slot="default" 忽略为隐形写法-->
+  <!--<slot-example>-->
+    <!--<template slot-scope="props">-->
+      <!--{{ props.msg }}-->
+    <!--</template>-->
+  <!--</slot-example>-->
+
+  <!--直接用于非template-->
+  <!--<slot-example>-->
+    <!--<span slot-scope="props">-->
+      <!--{{ props.msg }}-->
+    <!--</span>-->
+  <!--</slot-example>-->
+
+  <!--ES2015解构-->
+  <slot-example>
+    <span slot-scope="{ msg }">
+      {{ msg }}
+    </span>
+  </slot-example>
+</div>
+
+<script type="text/javascript">
+  Vue.component('slot-example', {
+    data: function () {
+      return {
+        msg: '你好slot-scope'
+      }
+    },
+    template: `
+    <div class="container">
+      <p>测试slot-scope</p>
+      <slot v-bind:msg="msg"></slot>
+    </div>
+    `
+  });
+  var app = new Vue({
+    el: '#app'
+  })
+</script>
+</body>
+</html>

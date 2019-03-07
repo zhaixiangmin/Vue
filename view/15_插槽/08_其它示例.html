@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>08_其它示例</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <todo-list v-bind:todos="todos">
+    <template v-slot:todo="{ todo }">
+      <span v-if="todo.isComplete">
+        {{ todo.msg }}
+      </span>
+    </template>
+  </todo-list>
+</div>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  Vue.component('todo-list', {
+    props: ['todos'],
+    template: `
+      <ul>
+        <li v-for="todo in todos" v-bind:key="todo.id">
+          <slot name="todo" v-bind:todo="todo">
+            {{ todo.msg }}
+          </slot>
+        </li>
+      </ul>
+    `
+  });
+  var app = new Vue({
+    el: '#app',
+    data: {
+      todos: [
+        { msg: 'one', isComplete: false },
+        { msg: 'two', isComplete: true },
+        { msg: 'three', isComplete: false },
+      ]
+    }
+  })
+</script>
+</body>
+</html>

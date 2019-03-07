@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>09_带有slot特性的具名插槽</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <base-layout>
+    <template slot="header">
+      <h1>Here might be a page title</h1>
+    </template>
+
+    <!--<p>A paragragh for the main content.</p>-->
+    <!--<p>And another one.</p>-->
+
+    <template>
+      <p>A paragragh for the main content.</p>
+      <p>And another one.template</p>
+    </template>
+
+    <template slot="footer">
+      <p>Here's some contact info</p>
+    </template>
+
+  </base-layout>
+</div>
+
+<script type="text/javascript">
+  Vue.component('base-layout', {
+    template: `
+    <div class="container">
+      <header>
+        <slot name="header"></slot>
+      </header>
+      <main>
+        <slot></slot>
+      </main>
+      <footer>
+        <slot name="footer"></slot>
+      </footer>
+    </div>
+    `
+  });
+  var app = new Vue({
+    el: '#app'
+  })
+</script>
+</body>
+</html>

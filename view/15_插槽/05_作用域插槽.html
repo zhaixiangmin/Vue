@@ -14,24 +14,18 @@
   <!--</current-user>-->
 
   <!--独占默认插槽的缩写语法-->
-  <!--<current-user>-->
-    <!--<template v-slot="slot">-->
-      <!--{{ slot.puser.firstName }}-->
-    <!--</template>-->
+  <!--<current-user v-slot="slot">-->
+    <!--{{ slot.puser.firstName }}-->
   <!--</current-user>-->
 
   <!--解构插槽Prop-->
-  <!--<current-user>-->
-    <!--<template v-slot="{ puser }">-->
-      <!--{{ puser.firstName }}-->
-    <!--</template>-->
+  <!--<current-user v-slot="{ puser }">-->
+    <!--{{ puser.firstName }}-->
   <!--</current-user>-->
 
   <!--解构插槽Prop -- 重命名-->
-  <current-user>
-    <template v-slot="{ puser: tuser }">
-      {{ tuser.firstName }}
-    </template>
+  <current-user v-slot="{ puser: tuser }">
+    {{ tuser.firstName }}
   </current-user>
 </div>
 
