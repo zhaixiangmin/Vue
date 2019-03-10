@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01_访问元素&组件_访问根实例</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <level-one></level-one>
+</div>
+<script type="text/javascript">
+  Vue.component('level-one', {
+    data: function() {
+      return {
+        foo1: this.$root.foo,
+        bar: this.$root.bar
+      }
+    },
+    methods: {
+      baz: function () {
+        this.$root.baz()
+      }
+    },
+    template: `
+      <div>
+        <h1>{{ foo1 }}</h1>
+        <h2 v-on:click="baz">{{ bar }}</h2>
+      </div>
+    `
+  });
+  var app = new Vue({
+    el: '#app',
+    data: {
+      foo: 1
+    },
+    computed: {
+      bar: function () {
+        // console.log('bar');
+        return this.foo * 2;
+      }
+    },
+    methods: {
+      baz: function () {
+        console.log('baz')
+      }
+    }
+  })
+</script>
+</body>
+</html>

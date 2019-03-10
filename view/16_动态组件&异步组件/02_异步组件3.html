@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02_异步组件3</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <async-webpack-example></async-webpack-example>
+</div>
+<script type="text/javascript">
+  Vue.component('async-webpack-example',
+    // 这个 `import` 函数会返回一个 `Promise`对象
+    () => import('./my-async-component'));
+  var app = new Vue({
+    el: '#app'
+  })
+</script>
+</body>
+</html>

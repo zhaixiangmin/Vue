@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_访问元素&组件_访问子组件实例或子元素</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <base-input ref="usernameInput"></base-input>
+  <input v-on:click="focus2" value="2"/>
+</div>
+<script type="text/javascript">
+  Vue.component('base-input', {
+    methods: {
+      focus: function () {
+        console.log('input focus this.$refs.usernameInput', this.$refs.usernameInput);
+      }
+    },
+    template: `
+      <input v-on:click="focus" ref="input" value="1"/>
+    `
+  });
+  var app = new Vue({
+    el: '#app',
+    data: {
+      foo: 1
+    },
+    methods: {
+      focus: function () {
+        console.log('base-input focus');
+        console.log('this.$refs.input', this.$refs.input);
+        this.$refs.input.focus()
+      },
+      focus2: function () {
+        console.log('focus2 this.$refs.usernameInput', this.$refs.usernameInput);
+        // this.$refs.input.focus()
+      }
+    }
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02_异步组件2</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <async-webpack-example></async-webpack-example>
+</div>
+<script type="text/javascript">
+  Vue.component('async-webpack-example', function (resolve) {
+    // 这个特殊的`require`语法将会告诉 webpack
+    // 自动将你的构建代码切割成多个包，这些包会通过Ajax请求加载
+    require(['/my-async-component'], resolve);
+  });
+  var app = new Vue({
+    el: '#app'
+  })
+</script>
+</body>
+</html>
