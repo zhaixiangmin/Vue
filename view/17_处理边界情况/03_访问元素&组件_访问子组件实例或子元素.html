@@ -7,18 +7,23 @@
 </head>
 <body>
 <div id="app">
-  <base-input ref="usernameInput"></base-input>
-  <input v-on:click="focus2" value="2"/>
+  <div @click="visit2">
+    访问子组件<base-input ref="usernameInput"></base-input>
+  </div>
+
+  <div @click="visit">
+    访问子元素 <input ref="input" value="3"/>
+  </div>
 </div>
 <script type="text/javascript">
   Vue.component('base-input', {
-    methods: {
-      focus: function () {
-        console.log('input focus this.$refs.usernameInput', this.$refs.usernameInput);
+    data: function () {
+      return {
+        base: '123'
       }
     },
     template: `
-      <input v-on:click="focus" ref="input" value="1"/>
+      <input ref="input" value="2"/>
     `
   });
   var app = new Vue({
@@ -27,17 +32,15 @@
       foo: 1
     },
     methods: {
-      focus: function () {
-        console.log('base-input focus');
-        console.log('this.$refs.input', this.$refs.input);
-        this.$refs.input.focus()
+      visit: function () {
+        console.log('this.$refs.input.value', this.$refs.input.value);
       },
-      focus2: function () {
-        console.log('focus2 this.$refs.usernameInput', this.$refs.usernameInput);
-        // this.$refs.input.focus()
+      visit2: function () {
+        console.log('this.$refs.usernameInput.base', this.$refs.usernameInput.base);
       }
     }
-  })
+  });
+
 </script>
 </body>
 </html>

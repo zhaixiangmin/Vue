@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>07_prevent_self</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <div @click="alert(1)">
+    <!-- 阻止所有的点击：点击a ==》 2、1，点击div ==》 3、1 -->
+    <!--<a href="https://www.baidu.com" @click.prevent.self="alert(2)">-->
+    <!-- 阻止对元素自身的点击: 点击a ==》 2、1，点击div ==》 3、1 跳转 -->
+    <a href="https://www.baidu.com" @click.self.prevent="alert(2)">
+      a标签
+      <div @click="alert(3)">div标签</div>
+    </a>
+  </div>
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#app',
+    methods: {
+      alert: function (n) {
+        alert(n);
+      }
+    }
+  })
+</script>
+</body>
+</html>

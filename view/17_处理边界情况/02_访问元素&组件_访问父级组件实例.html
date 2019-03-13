@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02_访问元素&组件_访问父级组件实例</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <google-map>
+    <google-map-region>
+      <google-map-markers></google-map-markers>
+    </google-map-region>
+  </google-map>
+</div>
+<script type="text/javascript">
+  Vue.component('google-map', {
+    data: function() {
+      return {
+        map: 'map data'
+      }
+    },
+    template: `
+      <div>
+        google-map
+        <slot></slot>
+      </div>
+    `
+  });
+  Vue.component('google-map-region', {
+    methods: {
+      region: function () {
+        console.log('region this.$parent.map:' + this.$parent.map);
+        console.log('region this.$root.name:' + this.$root.name);
+      }
+    },
+    template: `
+      <div v-on:click="region">
+        google-map-region
+        <slot></slot>
+      </div>
+    `
+  });
+  Vue.component('google-map-markers', {
+    methods: {
+      mark: function ($event) {
+        var map = this.$parent.map || this.$parent.$parent.map;
+        console.log('mark map:' + map);
+        console.log('mark this.$root.name:' + this.$root.name);
+      }
+    },
+    template: `
+      <div v-on:click="mark">
+        google-map-markers
+      </div>
+    `
+  });
+  var app = new Vue({
+    el: '#app',
+    data: {
+      name: 'Willian'
+    }
+  });
+</script>
+</body>
+</html>
