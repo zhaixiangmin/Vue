@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>06_强制更新</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <base-component :desc="desc"></base-component>
+  <div @click="desc = 'it\'s changed.'">change the desc</div>
+  <div>{{ desc }}</div>
+</div>
+<script type="text/javascript">
+  Vue.component('base-component', {
+    props: ['desc'],
+    template: `
+      <div>
+        {{ desc }}
+      </div>
+    `
+  });
+  var spp = new Vue({
+    el: '#app',
+    data: {
+      desc: 'Today, you look impossibly beautiful!'
+    }
+  })
+</script>
+</body>
+</html>

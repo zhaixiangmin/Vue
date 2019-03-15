@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01_单元素、组件的过渡</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<style type="text/css">
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
+</style>
+<div id="app">
+  <button @click="show = !show">Toggle</button>
+  <transition name="fade">
+    <p v-if="show">hello</p>
+  </transition>
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#app',
+    data: {
+      show: true
+    }
+  })
+</script>
+</body>
+</html>

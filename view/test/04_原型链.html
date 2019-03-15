@@ -6,8 +6,8 @@
 </head>
 <body>
 <script type="text/javascript">
-  function ClassA() {
-
+  function ClassA(txt) {
+    this.txt = txt;
   }
 
   ClassA.prototype.color = 'blue';
@@ -20,20 +20,22 @@
 
   }
 
-  ClassB.prototype = new ClassA();
+  ClassB.prototype = new ClassA('你好b');
   ClassB.prototype.name = '';
   ClassB.prototype.sayName = function () {
     console.log(this.name);
   };
 
-  var objA = new ClassA();
+  var objA = new ClassA('你好a');
   var objB = new ClassB();
   objA.color = 'blue';
   objB.color = 'red';
   objB.name = 'John';
+  console.log('objA.txt', objA.txt);
   objA.sayColor(); // blue
   objB.sayColor(); // red
   objB.sayName(); // John
+  console.log('objB.txt', objB.txt);
 
   console.log(objB instanceof ClassA); // true
   console.log(objB instanceof ClassB); // true
