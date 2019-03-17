@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>09_数组遍历</title>
+</head>
+<body>
+<script type="text/javascript">
+  var array = [1, 2, 3, 4, 5, 6, 7];
+  // 1.一般的遍历数据方法
+  // for (var i = 0; i < array.length; i++) {
+  //   console.log(i, array[i]);
+  // }
+
+  // 2.用for in的方法遍历数组
+  // for(let index in array) {
+  //   console.log(index, array[index]);
+  // }
+
+  // 2.2 用for in的方法遍历字符串
+  // var str = 'hello world!';
+  // for(let i in str) {
+  //   console.log(i, str[i]);
+  // }
+
+  // 2.3 用for in不仅可以对数组、字符串，也可以对enumerable对象操作
+  // var Obj = {
+  //   a: 1,
+  //   b: 2,
+  //   c: 3,
+  //   d: 'hello world'
+  // };
+  // for(let k in Obj) {
+  //   console.log(k, Obj[k]);
+  // }
+
+  // 3.forEach
+  // array.forEach(v => {
+  //   console.log(v);
+  // });
+  // array.forEach(function (v) {
+  //   console.log(v); // 1 2 3 4 5 6 7
+  // });
+
+  // 4.在ES6中，增加一个for of循环，使用起来很简单
+  // for(let v of array) {
+  //   console.log(v);  // 1 2 3 4 5 6 7
+  // }
+
+  // 4.2 map、set
+  // var set = new Set();
+  // set.add('a').add('b').add('d').add('c');
+  // var map = new Map();
+  // map.set('a', 1).set('b', 2).set(999, 3);
+  // for(let v of set) {
+  //   console.log(v);
+  // }
+  // console.log('-----------------------');
+  // for(let [k,v] of map) {
+  //   console.log(k, v);
+  // }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10_CSS垂直居中</title>
+</head>
+<body>
+
+<!--1.绝对定位和margin: auto、top等于bottom-->
+<style type="text/css">
+  #box {
+    width: 300px;
+    height: 300px;
+    background: #ddd;
+    position: relative;
+  }
+  #child {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    background: #A1CCFE;
+  }
+</style>
+
+<!--2.使用绝对定位和transform-->
+<!--缺点：某些情形下会出现文本或元素边界渲染模糊的现象-->
+<!--<style type="text/css">-->
+  <!--#box {-->
+    <!--width: 300px;-->
+    <!--height: 300px;-->
+    <!--background: #ddd;-->
+    <!--position: relative;-->
+  <!--}-->
+  <!--#child {-->
+    <!--position: absolute;-->
+    <!--top: 50%;-->
+    <!--transform: translateY(-50%);-->
+    <!--height: 100px;-->
+    <!--background: #93BC49;-->
+  <!--}-->
+<!--</style>-->
+
+
+<!--3. 父元素 display: flex; align-items: center-->
+<!--ie7/8 不兼容-->
+<!--<style type="text/css">-->
+  <!--#box {-->
+    <!--display: flex;-->
+    <!--align-items: center;-->
+    <!--width: 300px;-->
+    <!--height: 300px;-->
+    <!--background: #ddd;-->
+  <!--}-->
+  <!--#child {-->
+    <!--width: 100px;-->
+    <!--/*height: 100px;*/-->
+    <!--background: #8194AA;-->
+  <!--}-->
+<!--</style>-->
+
+
+<!--4. 父元素 display: flex; flex-direction: column;justify-content: center;-->
+<!--ie7/8 不兼容-->
+<!--<style type="text/css">-->
+  <!--#box {-->
+    <!--display: flex;-->
+    <!--flex-direction: column;-->
+    <!--justify-content: center;-->
+    <!--width: 300px;-->
+    <!--height: 300px;-->
+    <!--background: #ddd;-->
+  <!--}-->
+  <!--#child {-->
+    <!--width: 100px;-->
+    <!--height: 100px;-->
+    <!--background: #8194AA;-->
+  <!--}-->
+<!--</style>-->
+
+
+
+<!--5.使用绝对定位和负外边距对块级元素进行垂直居中-->
+<!--<style type="text/css">-->
+<!--#box {-->
+<!--width: 300px;-->
+<!--height: 300px;-->
+<!--background: #ddd;-->
+<!--position: relative;-->
+<!--}-->
+<!--#child {-->
+<!--width: 150px;-->
+<!--height: 100px;-->
+<!--background: orange;-->
+<!--position: absolute;-->
+<!--top: 50%;-->
+<!--margin: -50px 0 0 0;-->
+<!--line-height: 100px;-->
+<!--}-->
+<!--</style>-->
+
+<!--6. 父元素 display: table; display: 子元素 table-cell;display: table-cell;-->
+<!--<style type="text/css">-->
+  <!--#box {-->
+    <!--display: table;-->
+    <!--width: 300px;-->
+    <!--height: 300px;-->
+    <!--background: #ddd;-->
+  <!--}-->
+  <!--#child {-->
+    <!--display: table-cell;-->
+    <!--vertical-align: middle;-->
+    <!--width: 100px;-->
+    <!--height: 100px;-->
+    <!--background: #8194AA;-->
+  <!--}-->
+<!--</style>-->
+
+<div id="box">
+  <div id="child">我是测试DIV</div>
+</div>
+</body>
+</html>

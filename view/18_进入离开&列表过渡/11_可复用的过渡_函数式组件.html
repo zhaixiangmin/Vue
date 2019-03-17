@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>11_可复用的过渡_函数式组件</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+</head>
+<body>
+<div id="app">
+  <button @click="show = !show">Toggle</button>
+  <my-special-transition>
+    <p v-if="show">hello</p>
+  </my-special-transition>
+</div>
+<script type="text/javascript">
+  Vue.component('my-special-transition', {
+    functional: true,
+    render: function(createElement, context) {
+      var data = {
+        props: {
+          name: 'very-special-transition',
+          mode: 'out-in',
+          // css: 'false'
+        },
+        on: {
+          beforeEnter: function (el) {
+            el.style.opacity = 0;
+            el.style.transformOrigin = 'left';
+          },
+          enter: function (el, done) {
+            Velocity(el, {
+              opacity: 1,
+              fontSize: '1.4em'
+            }, {
+              duration: 300
+            });
+            Velocity(el, {
+              opacity: 1,
+              fontSize: '1em'
+            }, {
+              complete: done
+            });
+          },
+          leave: function (el, done) {
+            Velocity(el, {
+              translateX: '15px',
+              rotateZ: '50deg'
+            }, {
+              duration: 600
+            });
+            Velocity(el, {
+              rotateZ: '100deg'
+            }, {
+              loop: 2
+            });
+            Velocity(el, {
+              rotateZ: '45deg',
+              translateY: '300px',
+              translateX: '300px',
+              opacity: 0
+            }, {
+              complete: done
+            });
+          }
+        }
+      };
+      return createElement('transition', data, context.children);
+    }
+  });
+  var app = new Vue({
+    el: '#app',
+    data: {
+      show: false
+    }
+  })
+</script>
+</body>
+</html>

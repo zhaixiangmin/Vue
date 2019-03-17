@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>08_数组map方法</title>
+</head>
+<body>
+<script type="text/javascript">
+  var data = [1, 2, 3, 4];
+  var arrayOfSqueares = data.map(function (item) {
+    return item * item;
+  });
+  // console.log('arrayOfSqueares', arrayOfSqueares); // [1, 4, 9, 16]
+
+  var user = [
+    { name: '张含韵', email: 'zhang@email.com' },
+    { name: '江一燕', email: 'jiang@email.com' },
+    { name: '李小璐', email: 'li@email.com' },
+  ];
+
+  var emails = user.map(function (user) {
+    return user.email;
+  });
+  // console.log('emails', emails); // ["zhang@email.com", "jiang@email.com", "li@email.com"]
+
+
+  var Teacher = [
+    { name: '小红', age: 38 },
+    { name: '小绿', age: 48 },
+    { name: '小蓝', age: 58 },
+  ];
+
+  var emails2 = user.map(function (value, index, array) {
+    console.log('value', value);
+    console.log('index', index);
+    console.log('array', array);
+    console.log('this', this);
+
+    return value.email;
+  }, Teacher);
+  console.log('emails2', emails2);
+
+  // Array.prototype扩展可以让IE6-IE8浏览器也支持map方法
+  if(typeof Array.prototype.map != 'function') {
+    Array.prototype.map = function (fn, context) {
+      var arr = [];
+      if(typeof fn == 'function') {
+        for(var k=0, length = this.length; k++;) {
+          arr.push(fn.call(context, this[k], k, this));
+        }
+      }
+      return arr;
+    }
+  }
+</script>
+</body>
+</html>

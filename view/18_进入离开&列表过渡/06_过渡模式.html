@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>06_过渡模式</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<style type="text/css">
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
+</style>
+<div id="app">
+  <!--<transition name="fade" mode="out-in">-->
+  <transition name="fade" mode="in-out">
+    <button v-if="show" @click="show = !show" key="on">{{ on }}</button>
+    <button v-if="!show"  @click="show = !show" key="off">{{ off }}</button>
+  </transition>
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#app',
+    data: {
+      on: 'on',
+      off: 'off',
+      show: true
+    },
+    methods: {
+      change: function () {
+        this.show = !this.show
+      }
+    }
+  })
+</script>
+</body>
+</html>
