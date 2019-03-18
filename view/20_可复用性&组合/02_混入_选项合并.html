@@ -22,10 +22,18 @@
         message: 'hello',
         foo: 'abc'
       }
+    },
+    methods: {
+      fooFunc: function () {
+        console.log('fooFunc');
+      },
+      conflicting: function () {
+        console.log('from mixin');
+      }
     }
   };
 
-  new Vue({
+  var app = new Vue({
     mixins: [mixin],
     data: function () {
       return {
@@ -35,8 +43,20 @@
     },
     created: function () {
       console.log(this.$data); // {bar: "def", foo: "abc", message: "goodbye"}
+    },
+    methods: {
+      barFunc: function () {
+        console.log('barFunc');
+      },
+      conflicting: function () {
+        console.log('from self');
+      }
     }
   });
+
+  app.fooFunc(); // fooFunc
+  app.barFunc(); // barFunc
+  app.conflicting(); // from self
 </script>
 </body>
 </html>

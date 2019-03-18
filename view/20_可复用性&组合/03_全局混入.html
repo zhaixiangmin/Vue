@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_全局混入</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  03_全局混入
+</div>
+<script type="text/javascript">
+  Vue.mixin({
+    created: function () {
+      var myOption = this.$options.myOption;
+      if(myOption) {
+        console.log('myOption', myOption);
+      }
+    }
+  });
+
+  new Vue({
+    myOption: 'hello!'
+  });
+</script>
+</body>
+</html>
