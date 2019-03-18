@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02_混入_选项合并</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  02_混入_选项合并
+</div>
+<script type="text/javascript">
+  // 定义一个混入对象
+  var mixin = {
+    // 混入对象的钩子将在组件自身钩子之前调用
+    created: function() {
+      console.log('混入对象的钩子被调用')
+    },
+    // 数据对象在内部会进行递归合并，在和组件的数据发生冲突时以组件数据优先
+    data: function () {
+      return {
+        message: 'hello',
+        foo: 'abc'
+      }
+    }
+  };
+
+  new Vue({
+    mixins: [mixin],
+    data: function () {
+      return {
+        message: 'goodbye',
+        bar: 'def'
+      }
+    },
+    created: function () {
+      console.log(this.$data); // {bar: "def", foo: "abc", message: "goodbye"}
+    }
+  });
+</script>
+</body>
+</html>
