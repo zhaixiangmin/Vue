@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>04_使用JavaScript代替模板功能_v-model</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <demo></demo>
+</div>
+<script type="text/javascript">
+  Vue.component('demo', {
+    props: ['value'],
+    render: function (createElement) {
+      var self = this;
+      return createElement('input', {
+        domProps: {
+          value: self.value
+        },
+        on: {
+          input: function (event) {
+            self.$emit('input', event.target.value);
+          }
+        }
+      })
+    }
+  });
+  var app = new Vue({
+    el: '#app'
+  });
+</script>
+</body>
+</html>

@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25cd88a-6c39-4cf9-931d-3d2949e34514" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/view/17_处理边界情况/02_访问元素&amp;组件_访问父级组件实例.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/test/07_prevent_self.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/21_自定义指令/01_简介.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/21_自定义指令/02_钩子函数参数.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/21_自定义指令/03_函数简写.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/21_自定义指令/04_对象字面量.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/22_渲染函数&amp;JSX/01__基础.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/22_渲染函数&amp;JSX/02_完整示例.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/22_渲染函数&amp;JSX/03_使用JavaScript代替模板功能_v-if和v-for.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/22_渲染函数&amp;JSX/04_使用JavaScript代替模板功能_v-model.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/22_渲染函数&amp;JSX/05_插槽.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/22_渲染函数&amp;JSX/05_插槽2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/23_过滤器/01过滤器.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/17_处理边界情况/03_访问元素&amp;组件_访问子组件实例或子元素.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/17_处理边界情况/03_访问元素&amp;组件_访问子组件实例或子元素.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/20_可复用性&amp;组合/01_混入_基础.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/20_混入/01_基础.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/20_可复用性&amp;组合/02_混入_选项合并.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/20_混入/02_选项合并.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/20_可复用性&amp;组合/03_全局混入.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/20_混入/03_全局混入.html" afterDir="false" />
     </list>
     <ignored path="Vue.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,10 +35,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/view/17_处理边界情况/03_访问元素&amp;组件_访问子组件实例或子元素.html">
+        <entry file="file://$PROJECT_DIR$/view/23_过滤器/01过滤器.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="15" lean-forward="true" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+            <state relative-caret-position="187">
+              <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -51,11 +62,17 @@
       <find>onFocus</find>
       <find>navigation-link</find>
       <find>console.log</find>
+      <find>fade</find>
+      <find>.box</find>
+      <find>tweenedColor</find>
     </findStrings>
     <replaceStrings>
       <replace>template_html</replace>
       <replace>submit-button</replace>
       <replace>alert</replace>
+      <replace>slide-fade</replace>
+      <replace>.info_box</replace>
+      <replace>.info_box .info_content</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -64,40 +81,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/view/07_条件渲染/01_v-if.html" />
-        <option value="$PROJECT_DIR$/view/08_列表渲染/用v-for把一个数组对应为一组元素.html" />
-        <option value="$PROJECT_DIR$/view/08_列表渲染/02_一个对象的v-for.html" />
-        <option value="$PROJECT_DIR$/view/08_列表渲染/01_用v-for把一个数组对应为一组元素.html" />
-        <option value="$PROJECT_DIR$/view/08_列表渲染/03_数组更新检测.html" />
-        <option value="$PROJECT_DIR$/view/08_列表渲染/04_对象更新检测注意事项.html" />
-        <option value="$PROJECT_DIR$/view/08_列表渲染/05_显示过滤/排序结果.html" />
-        <option value="$PROJECT_DIR$/view/08_列表渲染/05_显示过滤_排序结果.html" />
-        <option value="$PROJECT_DIR$/view/08_列表渲染/06_一段取值范围的v-for.html" />
-        <option value="$PROJECT_DIR$/view/08_列表渲染/07_v-for on a template.html" />
-        <option value="$PROJECT_DIR$/view/08_列表渲染/08_v-for with v-if.html" />
-        <option value="$PROJECT_DIR$/view/08_列表渲染/09_一个组件的v-for.html" />
-        <option value="$PROJECT_DIR$/view/10_表单输入绑定/01_基础用法.html" />
-        <option value="$PROJECT_DIR$/view/10_表单输入绑定/02_值绑定.html" />
-        <option value="$PROJECT_DIR$/view/10_表单输入绑定/03_修饰符.html" />
-        <option value="$PROJECT_DIR$/view/11_组件基础/01_基本示例.html" />
-        <option value="$PROJECT_DIR$/view/11_组件基础/02_组件的复用.html" />
-        <option value="$PROJECT_DIR$/view/11_组件基础/03_通过Prop向子组件传递数据.html" />
-        <option value="$PROJECT_DIR$/view/11_组件基础/04_单个根元素.html" />
-        <option value="$PROJECT_DIR$/view/11_组件基础/test.html" />
-        <option value="$PROJECT_DIR$/view/11_组件基础/interview.html" />
-        <option value="$PROJECT_DIR$/view/interview.html" />
-        <option value="$PROJECT_DIR$/view/11_组件基础/05_监听子组件事件.html" />
-        <option value="$PROJECT_DIR$/view/11_组件基础/05_监听子组件事件2_使用事件抛出一个值.html" />
-        <option value="$PROJECT_DIR$/view/11_组件基础/05_监听子组件事件3_在组件上使用v-model.html" />
-        <option value="$PROJECT_DIR$/view/11_组件基础/06_通过插槽分发内容.html" />
-        <option value="$PROJECT_DIR$/view/14_自定义事件/01_事件名.html" />
-        <option value="$PROJECT_DIR$/view/13_Prop/07_自定义组件的v-model.html" />
-        <option value="$PROJECT_DIR$/view/14_自定义事件/02_自定义组件的v-model.html" />
-        <option value="$PROJECT_DIR$/view/14_自定义事件/03_将原生事件绑定到组件.html" />
-        <option value="$PROJECT_DIR$/view/14_自定义事件/03_将原生事件绑定到组件3.html" />
-        <option value="$PROJECT_DIR$/view/14_自定义事件/03_将原生事件绑定到组件2.html" />
-        <option value="$PROJECT_DIR$/view/test/06_闭包.html" />
-        <option value="$PROJECT_DIR$/view/14_自定义事件/04_.sync修饰符.html" />
         <option value="$PROJECT_DIR$/view/14_自定义事件/04_.sync修饰符2.html" />
         <option value="$PROJECT_DIR$/view/15_插槽/01_插槽内容.html" />
         <option value="$PROJECT_DIR$/view/15_插槽/02_编译作用域.html" />
@@ -115,6 +98,40 @@
         <option value="$PROJECT_DIR$/view/17_处理边界情况/02_访问元素&amp;组件_访问父级组件实例.html" />
         <option value="$PROJECT_DIR$/view/test/07_prevent_self.html" />
         <option value="$PROJECT_DIR$/view/17_处理边界情况/03_访问元素&amp;组件_访问子组件实例或子元素.html" />
+        <option value="$PROJECT_DIR$/view/test/04_原型链.html" />
+        <option value="$PROJECT_DIR$/view/17_处理边界情况/04_访问元素&amp;组件_依赖注入.html" />
+        <option value="$PROJECT_DIR$/view/17_处理边界情况/05_ 组件之间的循环引用.html" />
+        <option value="$PROJECT_DIR$/view/17_处理边界情况/06_强制更新.vue" />
+        <option value="$PROJECT_DIR$/view/17_处理边界情况/06_强制更新.html" />
+        <option value="$PROJECT_DIR$/view/18_进入离开&amp;列表过渡/01_氮元素/组件的过渡.html" />
+        <option value="$PROJECT_DIR$/view/18_进入离开&amp;列表过渡/01_氮元素/01_单元素、组件的过渡.html" />
+        <option value="$PROJECT_DIR$/view/18_进入离开&amp;列表过渡/01_单元素、组件的过渡.html" />
+        <option value="$PROJECT_DIR$/view/18_进入离开&amp;列表过渡/02_css过渡.html" />
+        <option value="$PROJECT_DIR$/view/18_进入离开&amp;列表过渡/03_CSS动画.html" />
+        <option value="$USER_HOME$/Desktop/I志愿/pc/activity.html" />
+        <option value="$PROJECT_DIR$/view/19_状态过渡/01_状态动画与侦听器.html" />
+        <option value="$PROJECT_DIR$/view/19_状态过渡/01_状态动画与侦听器2.html" />
+        <option value="$PROJECT_DIR$/view/19_状态过渡/02_把过渡放到组件里.html" />
+        <option value="$PROJECT_DIR$/view/20_可复用性&amp;组合/01_混入_基础.html" />
+        <option value="$PROJECT_DIR$/view/20_可复用性&amp;组合/02_混入_选项合并.html" />
+        <option value="$PROJECT_DIR$/view/20_可复用性&amp;组合/04_自定义指令_简介.html" />
+        <option value="$PROJECT_DIR$/view/20_可复用性&amp;组合/05_自定义指令_钩子函数参数.html" />
+        <option value="$PROJECT_DIR$/view/20_可复用性&amp;组合/06_自定义指令_函数简写.html" />
+        <option value="$PROJECT_DIR$/view/20_可复用性&amp;组合/07_自定义指令_对象字面量.html" />
+        <option value="$PROJECT_DIR$/view/21_自定义指令/01_简介.html" />
+        <option value="$PROJECT_DIR$/view/21_自定义指令/02_钩子函数参数.html" />
+        <option value="$PROJECT_DIR$/view/21_自定义指令/03_函数简写.html" />
+        <option value="$PROJECT_DIR$/view/21_自定义指令/04_对象字面量.html" />
+        <option value="$PROJECT_DIR$/view/20_混入/02_选项合并.html" />
+        <option value="$PROJECT_DIR$/view/20_混入/01_基础.html" />
+        <option value="$PROJECT_DIR$/view/22_渲染函数&amp;JSX/01__基础.html" />
+        <option value="$PROJECT_DIR$/view/22_渲染函数&amp;JSX/02_完整示例.html" />
+        <option value="$PROJECT_DIR$/view/22_渲染函数&amp;JSX/03_使用JavaScript代替模板功能.html" />
+        <option value="$PROJECT_DIR$/view/22_渲染函数&amp;JSX/03_使用JavaScript代替模板功能_v-if和v-for.html" />
+        <option value="$PROJECT_DIR$/view/22_渲染函数&amp;JSX/04_使用JavaScript代替模板功能_v-model.html" />
+        <option value="$PROJECT_DIR$/view/22_渲染函数&amp;JSX/05_插槽.html" />
+        <option value="$PROJECT_DIR$/view/22_渲染函数&amp;JSX/05_插槽2.html" />
+        <option value="$PROJECT_DIR$/view/23_过滤器/01过滤器.html" />
       </list>
     </option>
   </component>
@@ -125,9 +142,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1767" />
-    <option name="width" value="2022" />
-    <option name="height" value="2112" />
+    <option name="x" value="786" />
+    <option name="width" value="709" />
+    <option name="height" value="860" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -149,12 +166,6 @@
               <item name="Vue" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="17_处理边界情况" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -168,19 +179,21 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zhtj/dev" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/I志愿/pc" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Code\Vue\view" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\code\Vue\view\17_处理边界情况" />
-      <recent name="C:\code\Vue\view\16_动态组件&amp;异步组件" />
-      <recent name="D:\Code\Vue\view\15_插槽" />
-      <recent name="D:\Code\Vue\view\14_自定义事件" />
-      <recent name="D:\Code\Vue\view\13_Prop" />
+      <recent name="D:\Code\Vue\view\22_渲染函数&amp;JSX" />
+      <recent name="D:\Code\Vue\view\20_可复用性&amp;组合" />
+      <recent name="D:\Code\Vue\view\19_状态过渡" />
+      <recent name="D:\Code\Vue\view\18_进入离开&amp;列表过渡" />
+      <recent name="D:\Code\Vue\view\17_处理边界情况" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code\Vue\view\21_自定义指令" />
+      <recent name="D:\Code\Vue\view\18_进入离开&amp;列表过渡" />
+      <recent name="D:\Code\Vue\view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -247,17 +260,18 @@
       <workItem from="1552108785370" duration="625000" />
       <workItem from="1552207642919" duration="15582000" />
       <workItem from="1552487339385" duration="6690000" />
+      <workItem from="1552872837673" duration="13607000" />
+      <workItem from="1552957762592" duration="14041000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114716000" />
+    <option name="totallyTimeSpent" value="154865000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1178" y="0" width="1348" height="1408" extended-state="0" />
-    <editor active="true" />
+    <frame x="860" y="0" width="709" height="860" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29039633" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.44113263" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -280,260 +294,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/08_列表渲染/08_v-for with v-if.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="41" lean-forward="true" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/01_介绍/05_处理用户输入1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/08_列表渲染/09_一个组件的v-for.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="34" column="56" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/10_表单输入绑定/01_基础用法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="22" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/10_表单输入绑定/02_值绑定.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/10_表单输入绑定/03_修饰符.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/11_组件基础/01_基本示例.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/11_组件基础/02_组件的复用.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/interview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/01_介绍/01_声明式渲染1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/08_列表渲染/01_用v-for把一个数组对应为一组元素.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/09_事件处理/06_系统修饰符.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/09_事件处理/05_按键修饰符.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/09_事件处理/04_事件修饰符.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/09_事件处理/03_内联处理器中的方法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/09_事件处理/02_事件处理方法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/09_事件处理/01_监听事件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/11_组件基础/05_监听子组件事件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="56" lean-forward="true" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/11_组件基础/05_监听子组件事件2_使用事件抛出一个值.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/11_组件基础/05_监听子组件事件3_在组件上使用v-model.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/11_组件基础/06_通过插槽分发内容.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/13_Prop/06_非Prop的特性.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/13_Prop/07_自定义组件的v-model.html" />
-    <entry file="file://$PROJECT_DIR$/public/vendor/vue/vue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/14_自定义事件/03_将原生事件绑定到组件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/14_自定义事件/03_将原生事件绑定到组件3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/14_自定义事件/03_将原生事件绑定到组件2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/14_自定义事件/04_.sync修饰符.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/14_自定义事件/04_.sync修饰符2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/15_插槽/02_编译作用域.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/15_插槽/03_后备内容.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/15_插槽/01_插槽内容.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/15_插槽/04_具名插槽.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/14_自定义事件/01_事件名.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/14_自定义事件/02_自定义组件的v-model.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/13_Prop/01_Prop的大小写.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/11_组件基础/04_单个根元素.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/11_组件基础/03_通过Prop向子组件传递数据.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/15_插槽/05_作用域插槽.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
@@ -600,13 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/test/07_prevent_self.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/17_处理边界情况/01_访问元素&amp;组件_访问根实例.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -614,17 +367,268 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/17_处理边界情况/02_访问元素&amp;组件_访问父级组件实例.html">
+    <entry file="file://$PROJECT_DIR$/view/15_插槽/10_带有slot-scope特性的作用域插槽2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+        <state relative-caret-position="204">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/17_处理边界情况/03_访问元素&amp;组件_访问子组件实例或子元素.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="15" lean-forward="true" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+        <state relative-caret-position="119">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/test/03_apply()方法_对象冒充一起使用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/test/02_call()方法_对象冒充一起使用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/test/02_call()方法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/test/01_对象冒充2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/test/01_对象冒充.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/test/04_原型链.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/test/05_混合方式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/17_处理边界情况/02_访问元素&amp;组件_访问父级组件实例.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/17_处理边界情况/04_访问元素&amp;组件_依赖注入.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/17_处理边界情况/05_ 组件之间的循环引用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/17_处理边界情况/06_强制更新.vue" />
+    <entry file="file://$PROJECT_DIR$/view/17_处理边界情况/06_强制更新.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/vendor/vue/vue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/18_进入离开&amp;列表过渡/01_单元素、组件的过渡.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/18_进入离开&amp;列表过渡/02_css过渡.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/18_进入离开&amp;列表过渡/03_CSS动画.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/test/10_CSS垂直居中.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/I志愿/pc/activity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="108" column="14" lean-forward="true" selection-start-line="108" selection-start-column="14" selection-end-line="108" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/19_状态过渡/01_状态动画与侦听器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/19_状态过渡/01_状态动画与侦听器2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="46" column="39" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/19_状态过渡/02_把过渡放到组件里.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="44" column="46" lean-forward="true" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/21_自定义指令/02_钩子函数参数.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/21_自定义指令/03_函数简写.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/21_自定义指令/04_对象字面量.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/20_混入/02_选项合并.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/20_混入/01_基础.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/01_介绍/01_声明式渲染1.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/01_介绍/02_声明式渲染2.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/01_介绍/03_条件与循环1.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/01_介绍/04_条件与循环2.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/test/07_prevent_self.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/21_自定义指令/01_简介.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/22_渲染函数&amp;JSX/05_插槽.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/22_渲染函数&amp;JSX/05_插槽2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/22_渲染函数&amp;JSX/03_使用JavaScript代替模板功能_v-if和v-for.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="49" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/22_渲染函数&amp;JSX/04_使用JavaScript代替模板功能_v-model.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/22_渲染函数&amp;JSX/02_完整示例.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/22_渲染函数&amp;JSX/01__基础.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/23_过滤器/01过滤器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
         </state>
       </provider>
     </entry>

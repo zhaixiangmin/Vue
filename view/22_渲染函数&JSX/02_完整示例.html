@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02_完整示例</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <anchored-heading :level="1">
+    Hello world!
+    <div>!test div`</div>
+    <span>!test span#</span>
+  </anchored-heading>
+</div>
+<script type="text/javascript">
+  var getChildrenTextContent = function (children) {
+    return children.map(function (node) {
+      return node.children
+        ? getChildrenTextContent(node.children)
+        : node.text
+    }).join('');
+  };
+
+  Vue.component('anchored-heading', {
+    render: function (createElement) {
+      // 创建 kebab-case 风格的ID
+      var headingId = getChildrenTextContent(this.$slots.default)
+        .toLowerCase()
+        .replace(/\W+/g, '-')
+        .replace(/(^-|-$)/g, '');
+
+      return createElement(
+        'h' + this.level,
+        [
+          createElement('a', {
+            attrs: {
+              name: headingId,
+              href: '#' + headingId
+            }
+          }, this.$slots.default)
+        ]
+      )
+    },
+    props: {
+      level: {
+        type: Number,
+        required: true
+      }
+    }
+  });
+
+  var app = new Vue({
+    el: '#app'
+  });
+</script>
+</body>
+</html>

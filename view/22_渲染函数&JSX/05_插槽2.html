@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05_插槽2</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <demo :text="text" v-slot="slotProps">
+    {{ slotProps.text }}
+    <p>1111111111111</p>
+    <p>2222222222222</p>
+    <p>3333333333333</p>
+  </demo>
+</div>
+<script type="text/javascript">
+  Vue.component('child', {
+    props: ['message'],
+    template: `
+      <span>两点开始放假开始了地方</span>
+    `
+  });
+  Vue.component('demo', {
+    props: ['text'],
+    render: function (createElement) {
+      return createElement('div', [
+        createElement('child', {
+          scopedSlots: {
+            default: function (props) {
+              return createElement('span', props.text);
+            }
+          }
+        })
+      ]);
+    }
+  });
+  var app = new Vue({
+    el: '#app',
+    data: {
+      text: 'hello world!'
+    }
+  });
+</script>
+</body>
+</html>

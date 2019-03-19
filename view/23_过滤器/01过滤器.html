@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01过滤器</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <input v-model="message" />
+  <input v-model="arg1" />
+  <p>{{ message | capitalize(arg1) }}</p>
+</div>
+<script type="text/javascript">
+  // 全局定义过滤器
+  Vue.filter('capitalize', function (value, arg1) {
+    if(!value) {
+      return '';
+    }
+
+    value = value.toString();
+    return arg1 + ': ' + value.charAt(0).toUpperCase() + value.slice(1);
+  });
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'hello world!',
+      arg1: 'arg1'
+    },
+    // 组件的选项中定义本地的过滤器
+    // filters: {
+    //   capitalize: function (value) {
+    //     if(!value) {
+    //       return '';
+    //     }
+    //
+    //     value = value.toString();
+    //     return value.charAt(0).toUpperCase() + value.slice(1);
+    //   }
+    // }
+  })
+</script>
+</body>
+</html>

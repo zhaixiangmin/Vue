@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05_插槽</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <demo :message="message" v-slot="slotProps">
+    {{ slotProps.text }}
+    <p>1111111111111</p>
+    <p>2222222222222</p>
+    <p>3333333333333</p>
+  </demo>
+</div>
+<script type="text/javascript">
+  Vue.component('demo', {
+    props: ['message'],
+    // render: function (createElement) {
+    //   console.log('this.$slots.default', this.$slots.default);
+    //   return createElement('div', this.$slots.default);
+    // },
+    render: function (createElement) {
+      console.log(this.$scopedSlots.default({text: this.message}));
+      // `<div><slot :text="message"></slot></div>`
+      return createElement('div', [
+        this.$scopedSlots.default({
+          text: this.message
+        })
+      ])
+    }
+  });
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'hello world!'
+    }
+  });
+</script>
+</body>
+</html>

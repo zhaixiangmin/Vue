@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_函数简写</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <div v-color-swatch="'#ff0000'">测试函数简写</div>
+</div>
+<script type="text/javascript">
+  // 注册一个全局自定义指令 `v-focus`
+  Vue.directive('color-swatch', function (el, binding) {
+    // 聚焦元素
+    el.style.backgroundColor = binding.value;
+  });
+
+  var app = new Vue({
+    el: '#app'
+  });
+</script>
+</body>
+</html>
