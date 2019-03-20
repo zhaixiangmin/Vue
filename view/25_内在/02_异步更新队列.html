@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02_异步更新队列</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <!--<ul>-->
+    <!--<li>{{ message }}</li>-->
+  <!--</ul>-->
+
+  <example></example>
+</div>
+<script type="text/javascript">
+  Vue.component('example', {
+    template: `
+      <span @click="updateMessage">{{ msg }}</span>
+    `,
+    data: function () {
+      return {
+        msg: '没有更新'
+      }
+    },
+    // methods: {
+    //   updateMessage: function () {
+    //     this.msg = '更新完成';
+    //     console.log('this', this);
+    //     console.log('this.$el.textContent', this.$el.textContent); // 没有更新
+    //     this.$nextTick(function () {
+    //       console.log('$nextTick this.$el.textContent', this.$el.textContent); // 更新完成
+    //     });
+    //   }
+    // },
+    methods: {
+      updateMessage: async function () {
+        this.msg = 'updated';
+        console.log('this.$el.textContent', this.$el.textContent); // 没有更新
+        // 因为 $nextTick() 返回一个 Promise 对象，所以你可以使用新的 ES2016 async/await 语法完成相同的事情
+        await this.$nextTick();
+        console.log('await this.$el.textContent', this.$el.textContent); // updated
+      }
+    }
+  });
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: '123'
+    }
+  });
+
+  app.message = '456'; // 更新数据
+  // console.log('app.$el.textContent', app.$el.textContent); // 123
+  Vue.nextTick(function () {
+    // console.log('Vue.nextTick app.$el.textContent', app.$el.textContent); // 456
+  });
+
+</script>
+</body>
+</html>

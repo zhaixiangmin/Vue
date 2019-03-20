@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01_检测变化的注意事项</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <button type="button" v-on:click="change">按钮</button>
+  <ul>
+    <li>a: {{ a }}</li>
+    <li>obj: {{ obj }}</li>
+    <li>message: {{ message }}</li>
+    <!--<li v-if="b">b: {{ b }}</li>-->
+  </ul>
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#app',
+    data: {
+      a: 1,
+      obj: {
+
+      },
+      // message: ''
+    },
+    methods: {
+      change: function () {
+        // this.a = 2; // 响应
+        // Vue 不能检测到对象属性的添加或删除
+        // this.obj.b = 2; // 非响应
+        // this.$set(this.obj, 'b', 2); // 响应
+        // Vue.set(this.obj, 'b', 2); // 响应
+        // 添加多个属性
+        this.obj = Object.assign({}, this.obj, {
+          a: 1,
+          b: 2
+        })
+      }
+    }
+  });
+
+  app.message = 'Hello!';
+</script>
+</body>
+</html>
