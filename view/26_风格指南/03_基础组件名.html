@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_基础组件名</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+  <script src="../../public/vendor/require/RequireJS_v2.1.11.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+  var requireComponent = require.context('./base', true, /^Base[A-Z]/);
+  console.log('requireComponent', requireComponent);
+  requireComponent.keys().forEach(function (fileName) {
+    var baseComponentConfig = requireComponent(fileName);
+    baseComponentConfig = baseComponentConfig.default || baseComponentConfig;
+    var baseComponentName = baseComponentConfig.name || (
+      fileName
+        .replace(/^.+\//, '')
+        .replace(/\.\w+$/, '')
+    );
+    Vue.component(baseComponentName, baseComponentConfig);
+  });
+</script>
+</body>
+</html>
