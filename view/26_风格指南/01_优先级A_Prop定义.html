@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01_优先级A_Prop定义</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <input v-model="status" />
+  <demo-comp :status="status"></demo-comp>
+</div>
+<script type="text/javascript">
+  // const errorHandler = (error, vm) => {
+  //   console.log('抛出全局异常');
+  //   console.log('vm', vm);
+  //   console.log('error', error);
+  // };
+  // Vue.config.errorHandler = errorHandler;
+  // Vue.prototype.$throw = function(error) {
+  //   errorHandler(error, this);
+  // }
+
+  Vue.component('demo-comp', {
+    props: {
+      status: {
+        type: String,
+        required: true,
+        validator: function (value) {
+          return ['abc', 'def', 'ghi'].indexOf(value) !== -1;
+        }
+      }
+    },
+    template: `
+      <h1>status: {{ status }}</h1>
+    `
+  });
+  var app = new Vue({
+    el: '#app',
+    data: {
+      status: 'abc'
+    }
+  })
+</script>
+</body>
+</html>

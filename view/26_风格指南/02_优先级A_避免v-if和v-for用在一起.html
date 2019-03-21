@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02_优先级A_避免v-if和v-for用在一起</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <div @click="shouldShowUsers = !shouldShowUsers">{{ shouldShowUsers }}</div>
+  <!--反例-->
+  <!--<ul>-->
+    <!--&lt;!&ndash;<li v-for="user in users" v-if="user.isActive" :key="user.id">{{ user.name }}</li>&ndash;&gt;-->
+    <!--<li v-for="user in users" v-if="shouldShowUsers" :key="user.id">{{ user.name }}</li>-->
+  <!--</ul>-->
+
+  <!--好例子-->
+  <!--<ul>-->
+  <!--只遍历活跃用户，渲染更高效-->
+  <!--解藕渲染层的逻辑，可维护性 (对逻辑的更改和扩展) 更强-->
+    <!--<li v-for="user in activeUsers" :key="user.id">{{ user.name }}</li>-->
+  <!--</ul>-->
+
+  <!--将 v-if 移动到容器元素，我们不会再对列表中的每个用户检查 shouldShowUsers。
+  取而代之的是，我们只检查它一次，
+  且不会在 shouldShowUsers 为否的时候运算 v-for-->
+  <ul v-if="shouldShowUsers">
+    <li v-for="user in activeUsers" :key="user.id">{{ user.name }}</li>
+  </ul>
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#app',
+    data: {
+      users: [
+        { id: 1, name: 'n1', isActive: true },
+        { id: 2, name: 'n2', isActive: true },
+        { id: 3, name: 'n3', isActive: false },
+        { id: 4, name: 'n4', isActive: true },
+        { id: 5, name: 'n5', isActive: true },
+        { id: 6, name: 'n6', isActive: false },
+        { id: 7, name: 'n7', isActive: true },
+        { id: 8, name: 'n8', isActive: true },
+        { id: 9, name: 'n9', isActive: false },
+        { id: 10, name: 'n10', isActive: true },
+      ],
+      shouldShowUsers: true
+    },
+    computed: {
+      activeUsers : function () {
+        return this.users.filter(function (user) {
+          return user.isActive;
+        });
+      }
+    }
+  })
+</script>
+</body>
+</html>
