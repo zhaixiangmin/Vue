@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <span>Message: {{ msg }}</span><br/>
+  <span v-once>这个将不会改变：{{ msg }}</span>
+  <div v-on:click="testError">测试errorHandler</div>
+  <!--<input placeholder="按键" @keyup.page-up="keyboard"  />-->
+  <input placeholder="按键" @keyup.l-r="keyboard"  />
+  <!--capture 自身触发的事件先在此处理，然后才交由内部元素进行处理-->
+  <!--<a @click.capture="parent" style="display: block;width: 200px;height: 200px;background: red;">-->
+  <!--自身触发的事件先在此处理，停止内部元素进行处理-->
+  <!--<a @click.capture.stop="parent" style="display: block;width: 200px;height: 200px;background: red;">-->
+  <!--self 元素自身时触发处理函数，忽略内部元素触发-->
+  <!--<a @click.self="parent" style="display: block;width: 200px;height: 200px;background: red;">-->
+  <!--self.prevent 只会阻止对元素自身的点击，点击内部元素触发默认行为-->
+  <!--<a @click.self.prevent="parent" href="https://www.baidu.com" target="_blank" style="display: block;width: 200px;height: 200px;background: red;">-->
+  <!--prevent.self 等同  prevent，会阻止所有的点击-->
+  <a @click.prevent.self="parent" href="https://www.baidu.com" target="_blank" style="display: block;width: 200px;height: 200px;background: red;">
+    <div @click="child" style="width: 100px;height: 100px;background: black;"></div>
+  </a>
+</div>
+<script type="text/javascript">
+  console.log('Vue.config', Vue.config);
+  Vue.config = Object.assign(Vue.config, {
+    // 取消 Vue 所有的日志与警告
+    silent: true,
+    // 指定组件的渲染和观察期间未捕获错误的处理函数
+    errorHandler: function (err, vm, info) {
+      console.log('errorHandler err', err);
+      console.log('errorHandler vm', vm);
+      console.log('errorHandler info', info);
+    },
+    // 给 v-on 自定义键位别名
+    keyCodes: {
+      'l-r': [37, 39]
+    }
+  });
+
+  // 自定义合并策略的选项
+  Vue.config.optionMergeStrategies._my_option = function (parent, child, vm) {
+    console.log('parent', parent);
+    console.log('child', child);
+    return child + 1;
+  };
+
+  const Profile = Vue.extend({
+    _my_option: 1
+  });
+
+  console.log('Profile.options', Profile.options);
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      msg: 'Hello Vue!'
+    },
+    methods: {
+      testError: function (event) {
+        console.log(event);
+        throw new Error('测试错误');
+      },
+      keyboard: function (evenet) {
+        console.log('keyboard', event);
+      },
+      parent: function () {
+        console.log('parent');
+      },
+      child: function () {
+        console.log('child');
+      }
+    }
+  });
+</script>
+</body>
+</html>
