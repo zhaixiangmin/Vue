@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>11_Vue声明周期2</title>
+  <script src="../../public/vendor/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <p>{{ message }}</p>
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'xuxiao is boy'
+    },
+    mechods: {
+
+    },
+    beforeCreate: function () {
+      console.log('beforeCreate 创建前状态=======================》');
+      console.log("%c%s", 'color: red', 'el             :' + this.$el); // undefined
+      console.log("%c%s", 'color: red', 'data           :' + this.$data); // undefined
+      console.log("%c%s", 'color: red', 'message        :' + this.message); // undefined
+    },
+    created: function () {
+      console.log('created 创建完毕状态=======================》');
+      console.log("%c%s", 'color: red', 'el             :' + this.$el); // undefined
+      console.log("%c%s", 'color: red', 'data           :' + this.$data); // [object Object]
+      console.log("%c%s", 'color: red', 'message        :' + this.message); // xuxiao is boy
+    },
+    beforeMount: function () {
+      console.log('beforeMount 挂载前状态=======================》');
+      console.log("%c%s", 'color: red', 'el             :' + this.$el); // [object HTMLDivElement]
+      console.log(this.$el);
+    //  <div id="app">
+    //     <p>{{ message }}</p>
+    //   </div>
+
+      console.log("%c%s", 'color: red', 'data           :' + this.$data); // [object Object]
+      console.log("%c%s", 'color: red', 'message        :' + this.message); // xuxiao is boy
+    },
+    mounted: function () {
+      console.log('mounted 挂载结束状态=======================》');
+      console.log("%c%s", 'color: red', 'el             :' + this.$el); // [object HTMLDivElement]
+      console.log(this.$el);
+      //  <div id="app">
+      //     <p>xuxiao is boy</p>
+      //   </div>
+
+      console.log("%c%s", 'color: red', 'data           :' + this.$data); // [object Object]
+      console.log("%c%s", 'color: red', 'message        :' + this.message); // xuxiao is boy
+    },
+    // app.message= 'yes !! I do';
+    beforeUpdate: function () {
+      console.log('beforeUpdate 更新前状态=======================》');
+      console.log("%c%s", 'color: red', 'el             :' + this.$el); // [object HTMLDivElement]
+      console.log(this.$el);
+      //  <div id="app">
+      //     <p>xuxiao is boy</p>
+      //   </div>
+
+      console.log("%c%s", 'color: red', 'data           :' + this.$data); // [object Object]
+      console.log("%c%s", 'color: red', 'message        :' + this.message); // xuxiao is boy
+    },
+    updated: function () {
+      console.log('updated 更新完成状态=======================》');
+      console.log("%c%s", 'color: red', 'el             :' + this.$el); // [object HTMLDivElement]
+      console.log(this.$el);
+      //  <div id="app">
+      //     <p>{yes !! I do</p>
+      //   </div>
+
+      console.log("%c%s", 'color: red', 'data           :' + this.$data); // [object Object]
+      console.log("%c%s", 'color: red', 'message        :' + this.message); // xuxiao is boy
+    },
+    // app.$destroy();
+    beforeDestroy: function () {
+      console.log('beforeDestroy 销毁前状态=======================》');
+      console.log("%c%s", 'color: red', 'el             :' + this.$el); // [object HTMLDivElement]
+      console.log(this.$el);
+      console.log("%c%s", 'color: red', 'data           :' + this.$data); // [object Object]
+      console.log("%c%s", 'color: red', 'message        :' + this.message); // xuxiao is boy
+    },
+    destroy: function () {
+      console.log('destroy 销毁完成状态=======================》');
+      console.log("%c%s", 'color: red', 'el             :' + this.$el); // [object HTMLDivElement]
+      console.log(this.$el);
+      console.log("%c%s", 'color: red', 'data           :' + this.$data); // [object Object]
+      console.log("%c%s", 'color: red', 'message        :' + this.message); // xuxiao is boy
+    },
+  })
+</script>
+</body>
+</html>
